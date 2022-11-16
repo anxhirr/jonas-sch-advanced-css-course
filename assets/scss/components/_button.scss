@@ -14,16 +14,16 @@
   &:hover {
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba($clr-black, 0.2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
   }
 
   &:active {
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba($clr-black, 0.2);
-  }
-
-  &--white {
-    background-color: $clr-white;
-    color: #777;
   }
 
   &::after {
@@ -39,17 +39,33 @@
     transition: all 0.4s;
   }
 
-  &--white:after {
+  &--white {
     background-color: $clr-white;
-  }
+    color: #777;
 
-  &:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
+    &:after {
+      background-color: $clr-white;
+    }
   }
 
   &--animated {
     animation: movieInBottom 0.5s ease-out 0.75s;
     animation-fill-mode: backwards;
+  }
+
+  &-text {
+    display: inline-block;
+    font-size: 2rem;
+    padding: 2px;
+    color: $clr-primary;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid $clr-primary;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: translateY(-2px);
+      color: $clr-white;
+      background-color: $clr-primary;
+    }
   }
 }
