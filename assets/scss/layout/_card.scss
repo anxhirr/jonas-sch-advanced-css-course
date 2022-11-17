@@ -1,0 +1,91 @@
+.card {
+  position: relative;
+  height: 52rem;
+  perspective: 150rem;
+
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  &__side {
+    position: absolute;
+    width: 100%;
+    height: 52rem;
+    box-shadow: 0 1.5rem 4rem rgba($clr-black, 0.15);
+
+    backface-visibility: hidden;
+    transition: all 0.8s ease;
+
+    &--back {
+      transform: rotateY(-180deg);
+
+      &-1 {
+      }
+    }
+  }
+
+  //STYLING
+  &__picture {
+    height: 23rem;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    background-blend-mode: screen;
+
+    &--p1 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($clr-secondary-light, 0.8),
+          rgba($clr-secondary-dark, 0.8)
+        ),
+        url('../img/nat-5.jpg');
+    }
+  }
+
+  &__heading {
+    text-transform: uppercase;
+    text-align: right;
+    color: $clr-white;
+    font-size: 2.8rem;
+    font-weight: 500;
+
+    position: absolute;
+    right: 2rem;
+    top: 12rem;
+    width: 75%;
+
+    &-span {
+      padding: 1rem 1.5rem;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+      &--1 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($clr-secondary-light, 0.8),
+          rgba($clr-secondary-dark, 0.8)
+        );
+      }
+    }
+  }
+
+  &__details {
+    padding: 2rem;
+
+    & ul {
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+
+      & li {
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $clr-grey-light-2;
+        }
+      }
+    }
+  }
+}
