@@ -48,6 +48,15 @@
     }
   }
 
+  &--green {
+    background-color: $clr-primary;
+    color: #fff;
+
+    &:after {
+      background-color: $clr-primary;
+    }
+  }
+
   &--animated {
     animation: movieInBottom 0.5s ease-out 0.75s;
     animation-fill-mode: backwards;
@@ -61,6 +70,7 @@
     padding-bottom: 0.5rem;
     border-bottom: 1px solid $clr-primary;
     transition: all 0.2s;
+    text-decoration: none;
 
     &:hover {
       transform: translateY(-2px);

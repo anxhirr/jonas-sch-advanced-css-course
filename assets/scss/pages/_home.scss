@@ -19,7 +19,7 @@
   }
 
   .feature-box {
-    background-color: $clr-white;
+    background-color: rgba($clr-white, 0.8);
     font-size: 1.5rem;
     padding: 2.5rem;
     transition: all 0.3s;
@@ -42,4 +42,9 @@
 
 .section-tours {
   padding: 25rem 0 15rem 0;
+}
+
+.section-stories {
+  padding: 15rem 0;
+  position: relative;
 }
